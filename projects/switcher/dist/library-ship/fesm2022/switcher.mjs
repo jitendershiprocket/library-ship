@@ -1,6 +1,5 @@
 import * as i0 from '@angular/core';
-import { Injectable, Component, Input, NgModule } from '@angular/core';
-import * as i1 from '@angular/common';
+import { Injectable, Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 class SwitcherService {
@@ -16,42 +15,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImpo
         }], ctorParameters: () => [] });
 
 class SwitcherComponent {
-    data = '';
-    isModalOpen = false;
-    openModal() {
-        this.isModalOpen = true;
-    }
-    closeModal() {
-        this.isModalOpen = false;
-    }
-    ngOnChanges(changes) {
-        console.log('Changes:', changes);
+    ngOnInit() {
+        console.log("Hello From Switcher");
     }
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: SwitcherComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.2.13", type: SwitcherComponent, selector: "lib-switcher", inputs: { data: "data" }, usesOnChanges: true, ngImport: i0, template: `
-    <button (click)="openModal()">Open Modal</button>
-    <div *ngIf="isModalOpen" class="modal">
-      <div class="modal-content">
-        <span class="close" (click)="closeModal()">&times;</span>
-        <p>{{ data }}</p>
-      </div>
-    </div>
-  `, isInline: true, styles: [".modal{display:block;position:fixed}.close{cursor:pointer}\n"], dependencies: [{ kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.2.13", type: SwitcherComponent, selector: "lib-switcher", ngImport: i0, template: ``, isInline: true, styles: [".modal{display:block;position:fixed}.close{cursor:pointer}\n"] });
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: SwitcherComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'lib-switcher', template: `
-    <button (click)="openModal()">Open Modal</button>
-    <div *ngIf="isModalOpen" class="modal">
-      <div class="modal-content">
-        <span class="close" (click)="closeModal()">&times;</span>
-        <p>{{ data }}</p>
-      </div>
-    </div>
-  `, styles: [".modal{display:block;position:fixed}.close{cursor:pointer}\n"] }]
-        }], propDecorators: { data: [{
-                type: Input
-            }] } });
+            args: [{ selector: 'lib-switcher', template: ``, styles: [".modal{display:block;position:fixed}.close{cursor:pointer}\n"] }]
+        }] });
 
 class SwitcherModule {
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: SwitcherModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
